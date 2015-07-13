@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Geo</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+        <link href="style/root.css" type="text/css" rel="stylesheet">
+        <link href="style/shapes.css" type="text/css" rel="stylesheet">
+        <link href="style/actionBox.css" type="text/css" rel="stylesheet">
+        <link href="style/map.css" type="text/css" rel="stylesheet">
+        <link href="style/desig1.css" type="text/css" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="actionBox">
+            <div class="tabs">
+                <ul>
+                    <li>
+                        <a id="showOpenStreetMap" href="#showOpenStreetMap">OpenStreetMap</a>
+                    </li><li>
+                        <a id="showGoogleMap" href="#showGoogleMap">GoogleMap</a>
+                    </li><li>
+                        <a id="showHybridMap" href="#showHybridMap">HybridMap</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="geolocation">
+                <a id="currentPositionBtn" href="javascript:;">
+                    <div class="currentPositionBtn">
+                        <div class="north"></div>
+                        <div class="east"></div>
+                        <div class="south"></div>
+                        <div class="west"></div>
+                    </div>
+                </a>
+                <div class="positionOptions">
+                    <input id="enableHighAccuracy" type="checkbox" checked><label for="enableHighAccuracy">enableHighAccuracy</label>
+                    <input id="timeout" type="text" placeholder="timeout (8000 ms)">
+                    <input id="maximumAge" type="text" placeholder="maximumAge (0 ms)">
+                </div>
+            </div>
+            <div class="searchBox">
+                <div>
+                    <div id="nominatimSearch">
+                        <form action= Destination.html>
+                            <input placeholder="Address" id="pos" autocomplete="on" />
+                            <button id="searchBtn">Submit</button>
+                            <!--<button id="freezeltn">Freeze LOcation</button>-->
+                            <input type="submit" value="Destination">
+                              </form><br><br>
+                        <a href="ride.html" class="back_button button"> Back </a>
+                    </div>
+                    <div id="googleSearch">
+                        <input placeholder="Address" autocomplete="off" />
+                    </div>
+                    <div id="hybridSearch">
+                        <input placeholder="Address" autocomplete="off" />
+                    </div>
+                </div>
+            </div>
+            <div id="contactSearch">
+                <form>
+                    <input placeholder="Contact name" list="contacts" />
+                    <datalist id="contacts">
+                        <option>Francesco Iovine</option>
+                    </datalist>
+                    <button id="contactSearchBtn">Show on map</button>
+                    <button id="contactShowAllBtn">Show all contacts</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="maps">
+            <div id="openstreetmap"></div>
+            <div id="googlemap"></div>
+            <div id="hybridmap"></div>
+        </div>
+
+        <script src="libs/OpenLayers/OpenLayers.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+        <script src="scripts/utils/js-util.js"></script>
+        <script src="scripts/utils/contact-manager.js"></script>
+        <script src="scripts/utils/geolocation-manager.js"></script>
+        <script src="scripts/utils/map-factory.js"></script>
+
+        <script src="scripts/controllers/map.js"></script>
+        <script src="scripts/controllers/open-street-map.js"></script>
+        <script src="scripts/controllers/google-map.js"></script>
+        <script src="scripts/controllers/hybrid-map.js"></script>
+        <script src="scripts/controllers/map-switcher.js"></script>
+        <script src="scripts/controllers/geolocation-box.js"></script>
+        <script src="scripts/controllers/search-box.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>

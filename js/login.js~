@@ -1,0 +1,15 @@
+function valid()
+{
+if(document.login.username.value=="")
+{
+alert("please enter the valied user name");
+document.login.username.focus();
+return false;
+}
+if(document.login.password.value=="")
+{
+alert("please enter the Captcha code");
+document.login.password.focus();
+return false;
+}
+}

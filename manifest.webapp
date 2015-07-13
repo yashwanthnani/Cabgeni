@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "name": "cabgenie",
+  "description": "A common interface for all cab companies",
+  "launch_path": "/index.html",
+    "icons": {
+    "16": "/img/icons/icon16x16.png",
+    "48": "/img/icons/icon48x48.png",
+    "64": "/img/icons/icon.ico",
+    "128": "/img/icons/icon128x128C.png"
+  },
+  "developer": {
+    "name": "yash",
+    "url": "http://example.com"
+  },
+  "type": "privileged",
+  "permissions": {
+    "geolocation" : {} 
+  },
+  "installs_allowed_from": ["*"],
+  "locales": {
+    "es": {
+      "name": "Aplicación vacía privilegiada",
+      "description": "Una plantilla con la mínima estructura",
+      "permissions": {
+      }
+    }
+  },
+  "default_locale": "en"
+}
